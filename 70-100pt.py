@@ -9,8 +9,6 @@
 # 100pt - using lab 11 as an example, add in three horizontally scrolling "enemies"
 # Make them scroll at different speeds and directions.
 
-
-
 from Tkinter import *
 root = Tk()
 
@@ -33,19 +31,24 @@ class MyApp:
        	    self.up.bind("<Button-1>", self.upClicked)
        	    
        	    # No need to edit this - just includes the drawpad into our frame
-       	    drawpad.pack(side=BOTTOM)
+       	    drawpad.pack(side=RIGHT)
+       	    # call the animate function to start our recursion
+       	    self.animate()
 	
 	def animate(self):
 	    global drawpad
 	    global player
+	    global oval
 	    # Remember to include your "enemies" with "global"
-	    	
+	    
+	    # Uncomment this when you're ready to test out your animation!
+	    #drawpad.after(10,self.animate)
 		
 	def upClicked(self, event):   
 	   global oval
 	   global player
 	   drawpad.move(player,0,-20)
 		
-		
+
 app = MyApp(root)
 root.mainloop()
