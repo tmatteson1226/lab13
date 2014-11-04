@@ -38,7 +38,6 @@ class MyApp:
 	def animate(self):
 	    global drawpad
 	    global player
-	    global oval
 	    # Remember to include your "enemies" with "global"
 	    
 	    # Uncomment this when you're ready to test out your animation!
